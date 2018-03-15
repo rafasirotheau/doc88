@@ -5,12 +5,15 @@
         <movie-card :movie="movie"/>
       </div>
     </masonry>
+    <div class="loading" v-show="showLoading">
+      <font-awesome-icon icon="spinner" spin /> Page Loading
     </div>
   </div>
 </template>
 
 <script>
 import Vue from 'vue'
+import FontAwesomeIcon from '@fortawesome/vue-fontawesome'
 import MovieCard from '@/components/MovieCard'
 import infiniteScroll from 'vue-infinite-scroll'
 import VueMasonry from 'vue-masonry-css'
@@ -42,7 +45,7 @@ const movieApi = {
 export default {
   name: 'MovieList',
 
-  components: { MovieCard },
+  components: { FontAwesomeIcon, MovieCard },
 
   directives: { infiniteScroll },
 
