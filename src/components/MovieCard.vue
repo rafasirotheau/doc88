@@ -7,14 +7,28 @@
       <p>{{ movie.overview | truncate(12) }}</p>
     </div>
     <div class="movie-card--footer">
+      <star-rating
+        inactive-color="#dddddd"
+        active-color="#b9cb41"
+        :star-size="18"
+        :rating="fourStarRating()"
+        :round-start-rating="false"
+        :max-rating="4"
+        :read-only="true"
+        :show-rating="false"
+        />
     </div>
   </div>
 </template>
 
 <script>
+import StarRating from 'vue-star-rating'
+
 export default {
   name: 'MovieCard',
   props: ['movie'],
+
+  components: { StarRating },
 
   filters: {
     truncate: function (text, size) {
