@@ -1,14 +1,22 @@
 <template>
   <div class="movie-list"  v-infinite-scroll="loadMovies" infinite-scroll-disabled="reachedEnd">
-    <div class="movie-tile" v-for="(movie, index) in movieListArray" :key="index">
-      <movie-card :movie="movie"/>
+    <masonry :cols="{ default: 4, 1100: 3, 840: 2, 540: 1 }" :gutter="20">
+      <div class="movie-tile" v-for="(movie, index) in movieListArray" :key="index">
+        <movie-card :movie="movie"/>
+      </div>
+    </masonry>
     </div>
   </div>
 </template>
 
 <script>
+import Vue from 'vue'
 import MovieCard from '@/components/MovieCard'
 import infiniteScroll from 'vue-infinite-scroll'
+import VueMasonry from 'vue-masonry-css'
+
+Vue.use(VueMasonry)
+
 const movieApi = {
   base: 'https://api.themoviedb.org/3/discover/movie',
   params: {
