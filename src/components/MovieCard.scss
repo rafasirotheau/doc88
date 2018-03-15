@@ -1,0 +1,49 @@
+img {
+  display: block;
+}
+
+[class*="image-"] {
+  display: none;
+  background-size: cover;
+  background-repeat: no-repeat
+}
+
+@media (min-width: 520px) {
+  [class*="image-"] {
+    display: block;
+  }
+  img {
+    display: none;
+  }
+}
+
+.image-152 {
+  height: 152px;
+}
+.image-158 {
+  height: 158px;
+}
+.image-243 {
+  height: 243px;
+}
+.image-316 {
+  height: 316px;
+}
+
+.movie-card--content {
+  padding: 10px 20px;
+}
+.movie-card--footer {
+  border-top: solid 1px #ddd;
+  padding: 15px 20px;
+}
+
+h2 {
+  color: #717171;
+  font-size: 18px;
+}
+
+p {
+  color: #acaaaa;
+  font-size: 13px;
+}
