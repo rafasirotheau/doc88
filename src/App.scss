@@ -64,3 +64,33 @@ $grid-max: 1024px; // Tamanho do container
     }
   }
 }
+
+[class*="visible-"] {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .visible-xs {
+    display: block !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .visible-sm {
+    display: block !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .visible-md {
+    display: block !important;
+  }
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
