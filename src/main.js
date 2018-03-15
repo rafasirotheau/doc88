@@ -3,6 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import fontawesome from '@fortawesome/fontawesome'
+import { faSpinner, faSearch, faBars } from '@fortawesome/fontawesome-free-solid'
+
+fontawesome.library.add(faSpinner, faSearch, faBars)
 
 Vue.config.productionTip = false
 

@@ -1,0 +1,22 @@
+@import '../node_modules/typeface-open-sans/index.css';
+@import '../node_modules/normalize.css/normalize.css';
+
+body {
+  background-color: #f0efee;
+}
+#app {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  color: #8c8c8c;
+}
+
+.content {
+  padding-top: 40px;
+}
+
+h1, h2 {
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+}
